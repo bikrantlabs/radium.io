@@ -1,5 +1,6 @@
 {
-  "name": "auth",
+  "name": "radium.io",
+  "description": "Create beautiful code snippets with radium.io, inspired by carbon.now.sh",
   "version": "0.1.0",
   "private": true,
   "prisma": {
