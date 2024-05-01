@@ -5,6 +5,7 @@ import { auth } from "@/lib/auth"
 import { LoginButton } from "./auth/login-button"
 import { LogoutButton } from "./auth/logout-button"
 import { Icons } from "./icons"
+import { Logo } from "./logos/logo"
 import { Button } from "./ui/button"
 
 export const Navbar = async () => {
@@ -13,12 +14,11 @@ export const Navbar = async () => {
     <>
       <div className="sticky bg-background/90 z-10 backdrop-filter backdrop-blur-[6px] top-0 px-8 h-24 flex items-center justify-center w-full">
         <div className="flex-1 flex items-center justify-between">
-          <div className="flex items-center gap-x-2">
-            <Icons.logo className="h-5 w-5" />
-            <h1 className="text-xl font-semibold drop-shadow-lg bg-gradient-to-r from-white to-blue-400 text-transparent bg-clip-text">
-              The NextBase
-            </h1>
-          </div>
+          <Logo
+          // wrapperClassName="w-20 h-20"
+          // logoTextProps={{ className: "w-16 h-16" }}
+          // logoIconProps={{ className: "w-16 h-16" }}
+          />
           {session?.user ? (
             <div className="flex items-center gap-2">
               <Link href="/auth/settings">
